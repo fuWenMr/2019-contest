@@ -1,13 +1,18 @@
-# 2019年前端星计划
+# 2019年前端星计划提交
 
 这是星计划校招选拔的综合挑战题 的提交
 
 ## 实现描述
 
 用 JavaScript+canvas 实现的一个Q萌风推箱子游戏
-![](path/to/src/image/back.png)
 
 把甜甜圈放进盘子里
+
+![](path/to/show/pc1.jpg)
+![](path/to/show/pc2.jpg)
+![](path/to/show/phone1.jpg)
+
+
 
 
 ## 如何提交
