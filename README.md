@@ -8,9 +8,9 @@
 
 把甜甜圈放进盘子里
 
-![](path/to/show/pc1.jpg)
-![](path/to/show/pc2.jpg)
-![](path/to/show/phone1.jpg)
+![](https://github.com/fuWenMr/2019-contest/blob/master/show/pc1.jpg)
+![](https://github.com/fuWenMr/2019-contest/blob/master/show/pc2.jpg)
+![](https://github.com/fuWenMr/2019-contest/blob/master/show/phone1.jpg)
 
 
 
