@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<title>甜甜圈放到盘子里</title>
+<link href="styles.css" rel="stylesheet"></head>
+<body>
+    <div class="top">
+    	<div class="mybutton" id="menuBtn">
+    		选关
+		</div>
+		<div class="mybutton" data-level="0" id="hardBtn">
+				全部难度
+		</div>
+    	<div class="mybutton" id="replayBtn">
+    		重开
+    	</div>
+    	<div class="mybutton" id="cancleBtn">
+    		撤销
+    	</div>
+    </div>
+	<div class="TuiBox border-image">
+		<div id="contentL"></div>
+		<div id ="c" >
+			<canvas id="canvas1" width="600" height="600" class="canvas1" ></canvas>
+			<canvas id="canvas2" width="600" height="600" class="canvas1"></canvas>
+		</div>
+		<div id="res" class="result" >
+			<div id="resword" style="font-size: 30px;line-height: 120px;color: white;"></div>
+			<div class="mybutton next" style="margin-left:30px;">下一关</div>
+    		<div class="mybutton to_menu">选关</div>	
+    	</div>
+	</div>
+	<div class="control" id="keyboard">
+	    <img class="direction" id="upBtn" src="image/上-三角.png">
+	    <br>
+	    <img class="direction" id="leftBtn" src="image/左-三角.png">
+	    <img class="direction" id="rightBtn" src="image/右-三角.png">
+	    <br>
+	    <img class="direction" id="downBtn" src="image/下-三角.png"> 
+	</div>
+
+	<div hidden id="dataJSON">
+		<span id="json0">
+			{"size":[6,4],"outterWalls":[[0,1],[0,3],[5,3],[5,0],[1,0],[1,1]],"innerWalls":[],"boxs":[[2,2]],"targets":[[3,2]],"palyer":[1,2]}
+		</span>
+		<span id="json1">
+			{"size":[6,4],"outterWalls":[[0,1],[0,3],[5,3],[5,0],[1,0],[1,1]],"innerWalls":[],"boxs":[[2,2]],"targets":[[1,2]],"palyer":[1,2]}
+		</span>	
+		<span id="json2">
+			{"size":[8,8],"outterWalls":[[0,0],[0,7],[7,7],[7,0]],"innerWalls":[ [[4,2]] ],"boxs":[[2,2],[2,3]],"targets":[[1,2],[5,5]],"palyer":[1,2]}
+		</span>
+		<span id="json3">
+			{"size":[6,6],"outterWalls":[[0,0],[0,5],[5,5],[5,0]],"innerWalls":[ [[2,3]] ],"boxs":[[2,2],[2,4],[3,3]],"targets":[[4,2],[4,3],[4,4]],"palyer":[3,2]}
+		</span>
+		<span id="json4">
+			{"size":[6,6],"outterWalls":[[0,0],[0,5],[5,5],[5,0]],"innerWalls":[ [[2,3]] ],"boxs":[[2,2],[2,4],[3,3]],"targets":[[1,2],[1,3],[1,4]],"palyer":[3,2]}
+		</span>
+		<span id="json5">
+				{"size":[6,6],"outterWalls":[[0,0],[0,5],[5,5],[5,0]],"innerWalls":[ [[2,3]] ],"boxs":[[2,2],[2,4],[3,3]],"targets":[[1,2],[3,2],[1,4]],"palyer":[3,4]}
+		</span>
+		<span id="json6">
+				{"size":[6,6],"outterWalls":[[0,0],[0,5],[5,5],[5,0]],"innerWalls":[ [[2,3]] ],"boxs":[[2,2],[2,4],[3,3]],"targets":[[1,2],[2,1],[1,4]],"palyer":[3,4]}
+		</span>
+		<span id="json7">
+				{"size":[6,6],"outterWalls":[[0,0],[0,5],[5,5],[5,0]],"innerWalls":[ [[2,3]] ],"boxs":[[2,2],[2,4],[3,3],[4,3]],"targets":[[1,2],[2,1],[1,4],[4,1]],"palyer":[4,4]}
+		</span>
+
+
+		<span id="json8">
+			{"size":[6,6],"outterWalls":[ [0,0],[0,4],[1,4],[1,5],[5,5],[5,2],[4,2],[4,0] ],"innerWalls":[],"boxs":[[3,2],[2,3]],"targets":[[1,1],[2,1]],"palyer":[2,1]}
+		</span>
+		<span id="json9">
+			{"size":[6,6],"outterWalls":[ [0,0],[0,4],[2,4],[2,5],[5,5],[5,0] ],"innerWalls":[],"boxs":[ [2,2],[2,1],[2,3] ],"targets":[[1,1],[1,2],[2,1]],"palyer":[1,1]}
+		</span>
+		<span id="json10">
+				{"size":[6,6],"outterWalls":[ [0,0],[0,5],[5,5],[5,0] ],"innerWalls":[],"boxs":[ [2,1],[2,2],[2,3],[2,4] ],"targets":[[2,1],[3,2],[3,3],[3,4]],"palyer":[1,1]}
+		</span>
+		<span id="json11">
+			{"size":[6,7],"outterWalls":[ [1,0],[1,2],[0,2],[0,6],[5,6],[5,0] ],"innerWalls":[],"boxs":[ [2,2],[3,2],[4,2] ],"targets":[[3,1],[4,1],[3,2]],"palyer":[2,1]}
+		</span>
+		<span id="json12">
+			{"size":[9,9],"outterWalls":[[0,0],[0,4],[1,4],[1,5],[1,5],[1,8],[5,8],[5,7],[8,7],[8,2],[6,2],[6,4],[4,4],[4,0]],"innerWalls":[ [[2,4],[2,5]],[[5,6]] ],"boxs":[[2,2],[2,3],[3,2]],"targets":[[7,3],[7,4],[7,5]],"palyer":[1,1]}
+		</span>
+		<span id="json13">
+			{"size":[10,7],"outterWalls":[ [1,0],[1,2],[0,2],[0,5],[1,5],[1,6],[8,6],[8,4],[9,4],[9,1],[7,1],[7,0] ],"innerWalls":[ [[3,2],[5,2]],[[4,4],[4,5]] ],"boxs":[[2,2],[7,3]],"targets":[[2,4],[3,5]],"palyer":[2,3]}
+		</span>
+		<span id="json14">
+			{"size":[10,7],"outterWalls":[ [1,0],[1,2],[0,2],[0,5],[1,5],[1,6],[8,6],[8,4],[9,4],[9,1],[7,1],[7,0] ],"innerWalls":[ [[3,2],[5,2]],[[4,4],[4,5]] ],"boxs":[[2,2],[6,4],[7,3]],"targets":[[2,5],[3,4],[3,5]],"palyer":[2,3]}
+		</span>
+		<span id="json15">
+			{"size":[10,7],"outterWalls":[ [1,0],[1,2],[0,2],[0,5],[1,5],[1,6],[8,6],[8,4],[9,4],[9,1],[7,1],[7,0] ],"innerWalls":[ [[3,2],[5,2]],[[4,4],[4,5]] ],"boxs":[[2,2],[4,3],[6,4],[7,3]],"targets":[[2,4],[2,5],[3,4],[3,5]],"palyer":[2,3]}
+		</span>
+
+	</div>
+</body>
+</html>

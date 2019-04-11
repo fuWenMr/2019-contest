@@ -1,0 +1,171 @@
+
+.hidden{
+	display: none;
+}
+.top
+{
+	display: flex;
+	justify-content: space-between;
+	min-width: 320px;
+	width: 32%;
+	height: 60px;
+	margin:0 auto;
+}
+.TuiBox
+{
+	position: relative;
+	margin: 0px auto;
+	background: #eee; 
+
+
+	max-height:600px;
+	max-width:600px;
+
+	width: 85%;
+	height: 85vw;
+	/* width: 32%;
+	height: 32vw; */
+	/* min-height: 280px;
+	min-width: 280px; */
+}
+.border-image
+{ 
+		padding-top:20px;
+		padding-bottom:10px;
+		border:20px solid transparent; 
+		border-image-source:url(../image/ttq.png);  
+		border-image-slice:80 80 80 80;
+		margin-bottom: 50px;
+}
+
+.control
+{
+	width:100%;
+	height: 180px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.control img
+{
+	position: absolute;
+	width:50px;
+	height:50px;
+}
+.control #upBtn {top:5px;right:66px;}
+.control #leftBtn {top:60px;right:110px;}
+.control #rightBtn {top:60px;right:20px;}
+.control #downBtn {top:115px;right:66px;}
+body
+{
+	background-image: url(../image/index4.jpg);
+}
+.direction
+{
+	width: 50px;
+	height: 50px;
+	box-shadow: 5px 5px 5px gray;
+	background: #eee;
+}
+
+.mybutton
+{
+	width: 60px;
+	height: 30px;
+	float:left;
+	background: #eee;
+	margin: 10px;
+	line-height: 30px;
+	font-size: 14px;
+	box-shadow: 5px 5px 5px gray;
+	text-align: center;
+	border-radius:5%;
+	background: rgb(255,87,119);
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%,rgba(0, 0, 0, 0.12) 51%,rgba(0, 0, 0, 0.04));
+	color: white;
+	cursor: pointer;
+}
+#contentL
+{
+	z-index:2;
+	position: absolute;
+	top:0px;left:0px;
+	width: 100%;
+	height:100%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	align-content:flex-start;
+}
+#contentL:after {
+	flex-shrink:'20';
+	content: "";
+	flex: auto;
+}
+.level
+{
+	width:10%;
+	height:10%;
+	max-width: 45px;
+	max-height: 45px;
+	min-width: 30px;
+	min-height: 30px;
+	margin:10px; 
+	border-radius:10%;
+	color: white;
+	text-align: center;
+	line-height: 35px;
+	background-clip: padding-box;
+	background: rgb(255,87,119);
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%,rgba(0, 0, 0, 0.12) 51%,rgba(0, 0, 0, 0.04));
+	cursor: pointer;
+}
+.result
+{
+	position: relative;
+	top:-100px;
+	width: 200px;
+   	height: 200px;
+   	background: rgb(255,87,119);	
+   	z-index: 99;
+	text-align: center;
+	margin: -50% auto;
+	box-shadow: 5px 5px 5px gray;
+	visibility:hidden;
+}
+#keyboard
+{
+	visibility:hidden;
+}
+
+@media screen and (max-width: 500px){
+	.level
+	{
+		margin:3.5%;
+	}
+	#keyboard
+	{
+		visibility:visible;
+	}
+	
+}
+/* 几乎不存在的极端情况 */
+@media screen and (max-height: 500px){
+	.top
+	{
+		height:50px;
+	}
+	.control#keyboard
+	{
+		height:60px;
+		display:flex;
+		justify-content: center;
+	}
+	.control#keyboard img
+	{
+		width:45px;
+		height:45px;
+		margin: 0 5px;
+		position: static;
+	}
+}
