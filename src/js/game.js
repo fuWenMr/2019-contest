@@ -51,9 +51,8 @@ function reGame(data)
 var lastNumber =-1;
 function gameInit(number=0)
 {
-	console.log('run is'+number);
 	//加载关卡数据
-	data = getData(number);console.log('run is',data);
+	data = getData(number);
 	if(!data){return;}
 	lastNumber = number;
 	window.index = number;
@@ -128,8 +127,6 @@ function move(dx,dy)
 	var tY = game.player.y+dy;
 	var next;
 	var isNextWall;
-	console.log(tX,tY);
-	console.log(game.sokoMap[tX][tY]);
 	//这堆判断写的好丑
 	try
 	{
@@ -160,7 +157,7 @@ function move(dx,dy)
 	}
 	//玩家走
 	console.log('走起');
-	//历史栈需要最少三个数据
+	//历史栈需要三个数据
 	game.history.push([dx,dy,isBoxMove]);
 	game.player.move(dx,dy);
 

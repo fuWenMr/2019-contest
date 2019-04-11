@@ -22,7 +22,7 @@
 
 var data = require('../json/data.json');
 console.log('data',data);
-window.maxIndex = data.legnth-1;
+window.maxIndex = data.length-1;
 /**
  * 获得指定关卡数据对象的方法，关卡不存在返回undefined
  * @method drawPlayer

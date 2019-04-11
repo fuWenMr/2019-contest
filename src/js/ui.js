@@ -127,19 +127,16 @@ function result(value)
 	var resword = document.getElementById("resword");
 	resword.innerHTML="游戏成功!";
 	var mb = res.querySelector('.mybutton.next');
-	console.log(mb)
-	if(window.maxIndex&&window.index){
-		console.log(111)
+	if(window.maxIndex&&window.index)
+	{
 		if(window.maxIndex<=window.index)
-		{console.log(222)
+		{
 			mb.innerHTML = '通关!';
 			mb.onclick = function(){menuBtn.click();}
 			return;
 		}
 	}
-	console.log(33)
 	mb.innerHTML = '下一关!';
-	console.log(new Number(window.index)+1);
 	mb.onclick = function(){gameBegin(new Number(window.index)+1);}
 }
 
@@ -191,7 +188,6 @@ var ui = {
 		uiHandler.toGameBegin = fun;
 	},
 	result,
-
 	//dom对象
 	cancleBtn,
 	replayBtn,
