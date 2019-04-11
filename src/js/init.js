@@ -39,7 +39,7 @@ if(os.isTablet){
 }
 
 
-var levelnum=window.document.getElementById('dataJSON').querySelectorAll('span').length;
+var levelnum=require('./data.js').getData().length;
 creatlevel(levelnum);//关卡数量控制方法
 function creatlevel(value)
 {
