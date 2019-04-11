@@ -6,7 +6,7 @@
 
 用 JavaScript+canvas 实现的一个Q萌风推箱子游戏
 把甜甜圈放进盘子里
-![](https://p3.ssl.qhimg.com/t01a01fe1b96d05edcd.png)
+![](./src/image/back.png)
 
 ## 如何提交
 
