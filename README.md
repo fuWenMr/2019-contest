@@ -10,7 +10,7 @@
 
 把甜甜圈放进盘子里
 
-![](https://github.com/fuWenMr/2019-contest/blob/master/show/pc1.jpg)
+![](https://raw.githubusercontent.com/fuWenMr/2019-contest/master/show/pc1.jpg)
 ![](https://github.com/fuWenMr/2019-contest/blob/master/show/pc2.jpg)
 ![](https://github.com/fuWenMr/2019-contest/blob/master/show/phone1.jpg)
 
