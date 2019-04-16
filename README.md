@@ -4,6 +4,10 @@
 
 学号后四位就是手机号后四位吧
 
+#### 已开启github page
+
+输入 https://fuwenmr.github.io/2019-contest/dist/index.html 即可访问游戏界面
+
 ## 实现描述
 
 用 JavaScript+canvas 实现的一个Q萌风推箱子游戏
