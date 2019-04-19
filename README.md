@@ -3,6 +3,8 @@
 
 输入 https://fuwenmr.github.io/2019-contest/dist/index.html 即可访问游戏界面
 
+[或者点击这里](https://fuwenmr.github.io/2019-contest/dist/index.html)
+
 ## 实现描述
 
 用 JavaScript+canvas 实现的一个Q萌风推箱子游戏
